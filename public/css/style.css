@@ -1,0 +1,26 @@
+body{
+    font-family: 'Lemonada', cursive;
+    background-image: url("../images/background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+}
+#result {
+    position: absolute;
+    width: 100%;
+    max-width:870px;
+    cursor: pointer;
+    overflow-y: auto;
+    max-height: 400px;
+    box-sizing: border-box;
+    z-index: 1001;
+    font-size: 1.5rem;
+   }
+   .link-class:hover{
+    background-color:#f1f1f1;
+   }
+   #search{
+    font-size: 2rem;
+   }

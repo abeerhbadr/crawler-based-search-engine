@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="/css/<%= css %>.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="icon" href="/images/logo7-removebg-preview.png">
+    <title><%= title %></title>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a href="/Home"> <img src="/images/logo7-removebg-preview.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item <% if (title === 'Our Courses') { %>active<% } %>">
+            <div class="dropdown show" style="padding-left:0px;">
+         <a id="bttn"class="btn btn-secondary dropdown-toggle" style="cursor: pointer;
+         color: #aaa;
+         font-size: 1.3rem;background-color:rgb(252, 252, 252, 0); border:none; outline:none;" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Our Courses
+         </a>
+         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="/Embedded">Embedded System</a>
+            <a class="dropdown-item" href="/Machine">Machine Learning</a>
+            <a class="dropdown-item" href="/Web">Web Development</a>
+            <a class="dropdown-item" href="/Graphics">3D Graphics Design</a>
+         </div>
+        </div>
+          </li>
+          <li class="nav-item <% if (title === 'Contact Us') { %>active<% } %>">
+            <a class="nav-link" href="/contact" style="color: #aaa;font-size: 1.3rem">Contact us</a>
+          </li>
+        </ul>
+        <div class="my-2 my-lg-0">
+          <ul class="navbar-nav mr-auto">
+          <% if (isAuthenticatedd)
+          { %>
+            <li class="nav-item <% if (title === 'Register') { %>active<% } %>">
+              <a class="nav-link" href="/user-profile/<%= user.username %>" style="color: #aaa;font-size: 1.3rem">My Profile</a>
+            </li>
+            <li class="nav-item <% if (title === 'Log In') { %>active<% } %>">
+              <a class="nav-link" href="/logout" style="color: #aaa;font-size: 1.3rem">Log Out</a>
+            </li>
+
+            <% } else{ %> 
+            <li class="nav-item <% if (title === 'Register') { %>active<% } %>">
+              <a class="nav-link" href="/Register" style="color: #aaa;font-size: 1.3rem">Register</a>
+            </li>
+            <li class="nav-item <% if (title === 'Log In') { %>active<% } %>">
+              <a class="nav-link" href="/login" style="color: #aaa;font-size: 1.3rem">Log In</a>
+            </li>
+            <% }%>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+<body>
+    <main>
